@@ -9,14 +9,25 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  --
   {
     "nvim-pack/nvim-spectre",
     lazy = false
   },
 
   {
+    "mbbill/undotree",
+    lazy = false
+  },
+
+  {
     "akinsho/git-conflict.nvim",
     config = function() require('git-conflict').setup({}) end,
+    lazy = false
+  },
+
+  {
+    "tpope/vim-repeat",
     lazy = false
   },
 
@@ -41,5 +52,10 @@ return {
         end
       end, { noremap = true, desc = "Toggle Codeium active" })
     end,
+  },
+
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false
   }
 }
